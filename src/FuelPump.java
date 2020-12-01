@@ -11,10 +11,10 @@ public class FuelPump {
     }
 
     public int getTurnover(int price){
-        int fuelCounter = getFuelCounter();
+        int priceOfGas = getFuelCounter() * price;
         this.fuelCounter = 0;
 
-        return price * fuelCounter;
+        return priceOfGas;
     }
 
     public void setGasTank(GasTank gasTank) {
