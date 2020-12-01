@@ -12,7 +12,7 @@ public class FuelPump {
 
     public int getTurnover(int price){
         int priceOfGas = getFuelCounter() * price;
-        this.fuelCounter = 0;
+        resetFuelCounter();
 
         return priceOfGas;
     }
@@ -23,5 +23,9 @@ public class FuelPump {
 
     public int getFuelCounter() {
         return fuelCounter;
+    }
+
+    private void resetFuelCounter(){
+        fuelCounter = 0;
     }
 }
