@@ -36,10 +36,10 @@ public class GasTank {
 
     public void setGas(int gas){
         if(gas < GAS_MIN){
-            this.gas = 0;
+            this.gas = GAS_MIN;
         }
         else if(gas > GAS_MAX){
-            this.gas = 1000;
+            this.gas = GAS_MAX;
         }
         else{
             this.gas = gas;
