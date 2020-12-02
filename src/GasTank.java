@@ -35,7 +35,15 @@ public class GasTank {
     }
 
     public void setGas(int gas){
-        this.gas = gas;
+        if(gas < GAS_MIN){
+            this.gas = 0;
+        }
+        else if(gas > GAS_MAX){
+            this.gas = 1000;
+        }
+        else{
+            this.gas = gas;
+        }
     }
 
     public int getGas() {
