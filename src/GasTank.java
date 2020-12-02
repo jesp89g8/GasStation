@@ -1,3 +1,6 @@
+/**
+ * @author Jesper D20
+ */
 public class GasTank {
     private final int GAS_MAX = 1000;
     private final int GAS_MIN = 0;

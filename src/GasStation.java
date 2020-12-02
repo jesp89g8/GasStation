@@ -1,3 +1,6 @@
+/**
+ * @author Jesper D20
+ */
 public class GasStation {
     public static void main(String[] args) {
         gasTankTest();

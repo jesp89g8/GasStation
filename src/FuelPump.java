@@ -1,3 +1,6 @@
+/**
+ * @author Jesper D20
+ */
 public class FuelPump {
     private int fuelCounter;
     private GasTank gasTank;
