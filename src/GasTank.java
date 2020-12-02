@@ -4,7 +4,7 @@ public class GasTank {
     private int gas;
 
     /**
-     * constructs a gas tank with a specified liter amount
+     * Constructs a gas tank with a specified liter amount
      * @param gas the amount to assign to the gas tank
      */
     public GasTank(int gas){
@@ -12,9 +12,9 @@ public class GasTank {
     }
 
     /**
-     * 
-     * @param litres
-     * @return
+     * Adds gas to the tank, also checks if amount exceeds limit
+     * @param litres the amount to add to tank
+     * @return the amount put into the tank
      */
     public int addGas(int litres) {
         if((gas + litres) > GAS_MAX){
@@ -25,6 +25,11 @@ public class GasTank {
         return litres;
     }
 
+    /**
+     * Extracts gas from the tank and checks for exceeding minimum limit
+     * @param litres the amount to extract
+     * @return the amount extracted
+     */
     public int subtractGas(int litres){
         if((gas - litres) < GAS_MIN){
             litres = GAS_MAX - (GAS_MAX - getGas());
@@ -34,6 +39,11 @@ public class GasTank {
         return litres;
     }
 
+    /**
+     * Fills the tank to contain a specified amount of gas, checks if amount
+     * is between 0 and 1000
+     * @param gas the amount of gas the tank shall contain
+     */
     public void setGas(int gas){
         if(gas < GAS_MIN){
             this.gas = GAS_MIN;
@@ -46,6 +56,10 @@ public class GasTank {
         }
     }
 
+    /**
+     * Gets the amount of gas that currently is inside the tank
+     * @return the amount of gas in tank
+     */
     public int getGas() {
         return gas;
     }
