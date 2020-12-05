@@ -20,7 +20,7 @@ public class GasTank {
      * @return the amount put into the tank
      */
     public int addGas(int litres) {
-        if((gas + litres) > GAS_MAX){
+        if((getGas() + litres) > GAS_MAX){
             litres = GAS_MAX - getGas();
         }
         this.gas += litres;
@@ -34,7 +34,7 @@ public class GasTank {
      * @return the amount extracted
      */
     public int subtractGas(int litres){
-        if((gas - litres) < GAS_MIN){
+        if((getGas() - litres) < GAS_MIN){
             litres = GAS_MAX - (GAS_MAX - getGas());
         }
         this.gas -= litres;
